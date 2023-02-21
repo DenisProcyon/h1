@@ -12,23 +12,29 @@ public class Sheep {
    }
    
    public static void reorder (Animal[] animals) {
-      Integer animal = 0;
+      Integer sheep = 0;
+      Integer goats = 0;
 
       for (int i =0; i < animals.length; i++){
-         if (animals[i] == Animal.goat){
-            animal++;
+         if (animals[i] == Animal.sheep){
+            sheep++;
+         }
+         else {
+            goats++;
          }
       }
 
       int animal_index = 0;
-      for (int i = 0; i < animal; i++){
+      for (int i = 0; i < goats; i++){
          animals[animal_index] = Animal.goat;
          animal_index++;
       }
-      for (int i = 0; i < animals.length-animal; i++){
+      for (int i = 0; i < sheep; i++){
          animals[animal_index] = Animal.sheep;
          animal_index++;
       }
+
+      //System.out.println(Arrays.toString(animals));
    }
 }
 
