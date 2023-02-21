@@ -14,7 +14,7 @@ public class Sheep {
 
    public static void reorder (Animal[] animals) {
       // TODO!!! Your program here
-      Integer animal = 0;
+      int animal = 0;
 
       for (int i =0; i < animals.length; i++){
          if (animals[i] == Animal.goat){
